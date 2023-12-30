@@ -19,82 +19,54 @@ function Log_sign() {
   
   return (
     <Wrapper className="section">
-        <div className="mainBody">
-    <div class="container">
-    <input type="checkbox" id="flip"/>
-    <div class="cover">
-      <div class="front">
-        {/*<img src="public/frontImg.jpg" alt=""/>*/}
-        
-        <div class="text">
-          <span class="text-1">Every new friend is a <br/> new adventure</span>
-          <span class="text-2">Let's get connected</span>
-        </div>
-      </div>
-      <div class="back">
-         {/*<img src="public/back.jpg" alt=""/>*/}
-        
-        <div class="text">
-          <span class="text-1">Complete miles of journey <br/> with one step</span>
-          <span class="text-2">Let's get started</span>
-        </div>
-      </div>
-    </div>
-    <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Login</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Username" onChange={(event) => {
+    <div className="login">
+      <label> Login</label>
+
+      <input
+        placeholder="Username"
+        onChange={(event) => {
           setUsername(event.target.value);
-        }}/>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required/>
-              </div>
-             
-              <div class="button input-box">
-                <input type="submit" value="Sumbit"/>
-              </div>
-              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
-            </div>
-        </form>
-      </div>
-        <div class="signup-form">
-          <div class="title">Signup</div>
-        <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="First Name" required/>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Username" required/>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Last Name" required/>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required/>
-              </div>
-              <div class="button input-box">
-                <input type="submit" value="Sumbit"/>
-              </div>
-              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-            </div>
-      </form>
+        }}
+      />
+      <input
+        placeholder="Password"
+        type="password"
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
+      />
+      <button onClick={login}> Login</button>
     </div>
+
+    <div className="signUp">
+      <label> Sign Up</label>
+      <input
+        placeholder="First Name"
+        onChange={(event) => {
+          setUser({ ...user, firstName: event.target.value });
+        }}
+      />
+      <input
+        placeholder="Last Name"
+        onChange={(event) => {
+          setUser({ ...user, lastName: event.target.value });
+        }}
+      />
+      <input
+        placeholder="Username"
+        onChange={(event) => {
+          setUser({ ...user, username: event.target.value });
+        }}
+      />
+      <input
+        placeholder="Password"
+        type="password"
+        onChange={(event) => {
+          setUser({ ...user, password: event.target.value });
+        }}
+      />
+      <button onClick={signUp}> Sign Up</button>
     </div>
-    </div>
-  </div>
-  </div>
     </Wrapper>
   );
 }
@@ -107,7 +79,7 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
-.mainBody{
+body{
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -115,7 +87,6 @@ const Wrapper = styled.section`
   background-image: linear-gradient(to right, rgba(76, 167, 173, 0), rgb(98, 212, 212));
   padding: 30px;
 }
-
 .container{
   position: relative;
   max-width: 850px;
