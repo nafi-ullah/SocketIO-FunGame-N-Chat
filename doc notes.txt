@@ -1,0 +1,12 @@
+npx create-react-app socketio-app
+cd socketio-app
+npm start
+
+==> delete app.test.js, index.css, logo.svg, setuptest.js
+
+/server ==> npm init
+
+/socketio-app ==> npm i axios universal-cookie stream-chat stream-chat-react
+              ==> yarn add axios universal-cookie stream-chat stream-chat-react
+              ==> npm i styled-components
+
