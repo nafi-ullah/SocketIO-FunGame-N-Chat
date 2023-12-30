@@ -1,0 +1,7 @@
+npx create-react-app socketio-app
+cd socketio-app
+npm start
+
+==> delete app.test.js, index.css, logo.svg, setuptest.js
+
+
