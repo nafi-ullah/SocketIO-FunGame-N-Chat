@@ -5,8 +5,15 @@ npm start
 ==> delete app.test.js, index.css, logo.svg, setuptest.js
 
 /server ==> npm init
+        ==> npm i express nodemon uuid cors bcrypt
 
 /socketio-app ==> npm i axios universal-cookie stream-chat stream-chat-react
               ==> yarn add axios universal-cookie stream-chat stream-chat-react
               ==> npm i styled-components
+// need setup stream account: getstream.io
 
+
+// cors note
+CORS stands for Cross-Origin Resource Sharing. It is a browser security feature that restricts cross-origin HTTP requests
+ with other servers and specifies which domains can access your resources1. CORS allows you to configure the web API’s security 
+ and prevent unknown websites from accessing your server’s resources2.
