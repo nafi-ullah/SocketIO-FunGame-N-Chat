@@ -54,11 +54,13 @@ function Log_sign() {
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required/>
+                <input type="password" placeholder="Enter your password"  onChange={(event) => {
+          setPassword(event.target.value);
+        }}/>
               </div>
              
               <div class="button input-box">
-                <input type="submit" value="Sumbit"/>
+                <input type="submit" value="Sumbit" onClick={login}/>
               </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
@@ -70,22 +72,30 @@ function Log_sign() {
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="First Name" required/>
+                <input type="text" placeholder="First Name" onChange={(event) => {
+          setUser({ ...user, firstName: event.target.value });
+        }}/>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Username" required/>
+                <input type="text" placeholder="Last Name" onChange={(event) => {
+          setUser({ ...user, lastName: event.target.value });
+        }}/>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Last Name" required/>
+                <input type="text" placeholder="Username" onChange={(event) => {
+          setUser({ ...user, username: event.target.value });
+        }}/>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required/>
+                <input type="password" placeholder="Enter your password" onChange={(event) => {
+          setUser({ ...user, password: event.target.value });
+        }}/>
               </div>
               <div class="button input-box">
-                <input type="submit" value="Sumbit"/>
+                <input type="submit" value="Sumbit" onClick={signUp}/>
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>
